@@ -1,0 +1,260 @@
+@extends('default')
+
+@section('title','Cuenta CCH')
+
+@section('content')
+
+<div id="preloader">
+<div id="status">&nbsp;</div>
+</div>
+
+	<nav class="cd-stretchy-nav">
+		<a class="cd-nav-trigger" href="#0">
+			<span aria-hidden="true"></span>
+		</a>
+		<ul>
+			<li><a href="/niveles"><span>Inicio</span></a></li>
+			<li><a href="/niveles/cuenta-cch" class="active"><span>Cuenta</span></a></li>
+			<li><a href="/niveles/navega-seguro"><span>Navega</span></a></li>
+			<li><a href="/niveles/busqueda"><span>Busca</span></a></li>
+			<li><a href="/niveles/organizate"><span>Organiza</span></a></li>
+		</ul>
+		<span aria-hidden="true" class="stretchy-nav-bg"></span>
+	</nav>
+
+	<div class="container-fluid no-margin">
+	<div class="row">
+
+		<div class="col-sm-12 project nivel-portada">
+
+			<div class="logo-cch"></div>
+
+        <div class="project-hover">
+			<div class="glyph-icon flaticon-mail"></div>
+        	<h2>Tu cuenta<br class="hidden-xs"> CCH</h2>
+            <p>Obtén tu correo y conócelo</p>
+        </div>
+
+		<a class="page-scroll" href="#actividades"><button class="scroll texto-icono">Scroll</button></a>
+        </div>
+
+				<div class="col-sm-8 col-sm-offset-2" id="actividades">
+				<div class="wow animated fadeIn" data-wow-duration="2s">
+
+					<div class="videoWrapper videoWrapper169 js-videoWrapper">
+							<iframe class="videoIframe js-videoIframe" src="" frameborder="0" allowtransparency="true" allowfullscreen="" data-src="https://www.youtube.com/embed/AEtxQG2X9lw?autoplay=1&amp; modestbranding=0&amp;rel=0&amp;hl=es;"></iframe>
+    				<button class="videoPoster js-videoPoster" style="background-image: url(../img/poster_video_cuenta_cch.png)">Reproducir video</button>
+ 					</div>
+
+				</div>
+				</div>
+
+				<div class="col-sm-6 col-sm-offset-3 no-padding">
+
+					<div class="col-lg-6 col-md-12 col-sm-12">
+						<div class="media">
+							<div class="media-body">
+								<p>Navega gratis en todos los campus de la UNAM con tu RIU, para saber cómo obtenerla, descarga y lee el siguiente manual:</p>
+							</div>
+							<div class="media-right hidden-xs hidden-sm">
+								<a href="../docs/cuenta_riu.pdf" class="boton_descarga" target="_blank"><span>Descarga</span><span>PDF</span></a>
+							</div>
+							<div class="center-block visible-xs visible-sm">
+								<a href="../docs/cuenta_riu.pdf" class="boton_descarga" target="_blank"><span>Descarga</span><span>PDF</span></a>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-lg-6 col-md-12 col-sm-12">
+						<div class="media">
+							<div class="media-body">
+								<p>Disfruta los beneficios de contar con Office 365 con licencia en tus dispositivos, para saber cómo instalarlo, descarga y lee el siguiente manual:</p>
+							</div>
+							<div class="media-right hidden-xs hidden-sm">
+								<a href="../docs/paqueteria_office_365.pdf" class="boton_descarga" target="_blank"><span>Descarga</span><span>PDF</span></a>
+							</div>
+							<div class="center-block visible-xs visible-sm">
+								<a href="../docs/paqueteria_office_365.pdf" class="boton_descarga" target="_blank"><span>Descarga</span><span>PDF</span></a>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="col-sm-6 col-sm-offset-3">
+					<hr class="separa_nivel_1">
+				</div>
+
+				<div class="col-sm-6 col-sm-offset-3">
+
+					<p>Tu contraseña sirve para proteger tu información por lo que es importante que sea segura, para lograrlo toma en cuenta que:</p>
+
+					<div class="numeros_nivel_1">
+					<p><span>1</span> &nbsp;No sea muy sencilla o esté formada por datos personales.</p>
+					<p><span>2</span> &nbsp;Que tenga caracteres variados considerando mayúsculas, minúsculas, símbolos y números.</p>
+					<p><span>3</span> &nbsp;Asegúrate de guardarla en un lugar donde puedas consultarla por si se te olvida.</p>
+					</div>
+
+					<p>Ahora te invitamos a realizar las siguientes actividades, así que lee atentamente las indicaciones.</p>
+
+				</div>
+
+
+				<div class="col-sm-10 linea_cuenta_mail_izq">
+				</div>
+
+				<div class="col-sm-6 col-sm-offset-3">
+				<div class="wow animated fadeIn" data-wow-duration="2s">
+					<div class="actividad actividad_cuenta_numero">Actividad 1</div>
+					<h2 class="actividad_titulo">Contraseñas seguras</h2>
+					<p class="no-margin">Es importante tener una contraseña segura, así que prueba con el siguiente simulador para obtenerla. Una vez que la tengas, consérvala para que la incorpores a tu correo que obtendrás en la siguiente actividad. Por cierto, no te olvides de anotarla en algún sitio por si la llegas a olvidar.
+					</p>
+
+
+						<fieldset class="ejercicio_pass">
+						<div class="form-group">
+						<input id="translations" type="text" class="form-control" placeholder="Password" />
+						</div>
+						</fieldset>
+
+				</div>
+				</div>
+
+				<div class="col-sm-10 col-sm-push-2 linea_cuenta_mail_der">
+				</div>
+
+				<div class="col-sm-6 col-sm-offset-3">
+				<div class="wow animated fadeIn" data-wow-duration="2s">
+					<div class="actividad actividad_cuenta_numero">Actividad 2</div>
+					<h2 class="actividad_titulo">Cuenta de correo</h2>
+					<p>Ahora que ya tienes una contraseña segura, ingresa a <a href="https://plataforma.cch.unam.mx" target="_blank">https://plataforma.cch.unam.mx</a> para obtener tu correo institucional @alumno.cch.unam.mx</p>
+
+					<p class="no-margin">En el siguiente video encontrarás un paso a paso que te orientará:</p>
+				</div>
+				</div>
+
+				<div class="col-sm-8 col-sm-offset-2">
+				<div class="wow animated fadeIn" data-wow-duration="2s">
+					<div class="videoWrapper videoWrapper169 js-videoWrapper">
+    				<iframe class="videoIframe js-videoIframe" src="" frameborder="0" allowtransparency="true" allowfullscreen data-src="https://www.youtube.com/embed/2WeUl75mwWE?autoplay=1&amp;modestbranding=0&amp;rel=0&amp;hl=es&amp;vq=hd1080&amp"></iframe>
+    				<button class="videoPoster js-videoPoster" style="background-image: url(../img/poster_video_correo_cch.jpg)">Reproducir video</button>
+ 					</div>
+				</div>
+				</div>
+
+				<div class="col-sm-9 linea_cuenta_mail_izq">
+				</div>
+
+				<div class="col-sm-6 col-sm-offset-3">
+					<div class="wow animated fadeIn" data-wow-duration="2s">
+						<!-- <div class="actividad actividad_cuenta_numero">Microsoft Teams</div> -->
+						<h2 class="actividad_titulo">Aulas Virtuales con Teams</h2>
+						<p>Como alumn@ del CCH al obtener tu correo institucional, uno de los recursos al que tienes acceso son las Aulas Virtuales a través de la herramienta de <strong>Microsoft Teams</strong> (parte de la suite Microsoft 365) en la que puedes
+							comunicarte y trabajar con tus compañeros y profesores. Este recurso te permite enviar mensajes de texto, realizar llamadas y videollamadas, programar reuniones, compartir contenido (presentaciones, documentos, hojas de cálculo), crear Equipos
+							para Clases (con tus profesores y compañeros, enviar tareas, recibir calificaciones, usar un bloc de notas), entre otras cosas. Ve el siguiente video para que conozcas más sobre este recurso:</p>
+					</div>
+				</div>
+
+				<div class="col-sm-8 col-sm-offset-2">
+					<div class="wow animated fadeIn" data-wow-duration="2s">
+						<div class="videoWrapper videoWrapper169 js-videoWrapper">
+							<iframe class="videoIframe js-videoIframe" src="" frameborder="0" allowtransparency="true" allowfullscreen="" data-src="https://www.youtube.com/embed/5sYK8XjEYXY?autoplay=1&amp; modestbranding=0&amp;rel=0&amp;hl=es;vq=hd1080"></iframe>
+							<button class="videoPoster js-videoPoster" style="background-image: url(../img/poster_video_microsoft_teams.jpg)">Reproducir video</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-sm-6 col-sm-offset-3">
+					<div class="wow animated fadeIn" data-wow-duration="2s">
+						<div class="media">
+							<div class="media-body">
+								<p class="text-left">Para ingresar a las Aulas Virtuales sólo tienes que entrar a tu correo y seleccionar la aplicación desde el portal de aplicaciones de Office 365. En el siguiente documento te decimos cómo.</p>
+								<div class="center-block visible-xs visible-sm">
+									<a href="../docs/aulas-virtuales.pdf" class="boton_descarga" target="_blank"><span>Descarga</span><span>PDF</span></a>
+								</div>
+								<p>Es importante que sepas que la aplicación de <strong>Microsoft Teams</strong> puede ser utilizada desde diferentes equipos, dispositivos, sistemas operativos y navegadores.</p>
+							</div>
+							<div class="media-right hidden-xs hidden-sm">
+								<a href="../docs/aulas-virtuales.pdf" class="boton_descarga" target="_blank"><span>Descarga</span><span>PDF</span></a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-sm-6 col-sm-offset-3">
+					<div class="wow animated fadeIn" data-wow-duration="2s">
+						<div class="dispositivos">
+							<div class="col-lg-3 col-xs-6">
+								<img class="img-responsive" src="../img/teams/computadora.png" alt="Microsoft Teams">
+								<strong>Computadora</strong>
+							</div>
+							<div class="col-lg-3 col-xs-6">
+								<img class="img-responsive" src="../img/teams/laptop.png" alt="Microsoft Teams">
+								<strong>Laptop</strong>
+							</div>
+
+							<div class="clearfix visible-xs-block"></div>
+
+							<div class="col-lg-3 col-xs-6">
+								<img class="img-responsive" src="../img/teams/tablet.png" alt="Microsoft Teams">
+								<strong>Tablet</strong>
+							</div>
+							<div class="col-lg-3 col-xs-6">
+								<img class="img-responsive" src="../img/teams/smartphone.png" alt="Microsoft Teams">
+								<strong>Smartphone</strong>
+							</div>
+
+							<div class="clearfix visible-xs-block"></div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-sm-6 col-sm-offset-3">
+					<hr class="separa_nivel_1">
+				</div>
+
+
+				<div class="col-sm-6 col-sm-offset-3">
+					<div class="wow animated fadeIn" data-wow-duration="2s">
+						<div class="descarga-teams">
+							<div class="col-lg-3 col-sm-12 no-padding">
+								<p>En los siguientes vínculos puedes descargar la aplicación para tus dispositivos:</p>
+							</div>
+							<div class="col-lg-3 col-sm-4 col-xs-4 text-center">
+								<a href="https://play.google.com/store/apps/details?id=com.microsoft.teams" target="_blank"><img class="img-responsive logo-descarga-teams" src="../img/teams/android.svg" alt="Descarga Micrsoft Teams"></a>
+								<strong>Android</strong>
+							</div>
+							<div class="col-lg-3 col-sm-4 col-xs-4 text-center">
+								<a href="https://www.microsoft.com/es-mx/microsoft-365/microsoft-teams/download-app" target="_blank"><img class="img-responsive logo-descarga-teams" src="../img/teams/ios.svg" alt="Descarga Micrsoft Teams"></a>
+								<strong>iOS</strong>
+							</div>
+							<div class="col-lg-3 col-sm-4 text-center">
+								<a href="https://www.microsoft.com/es-mx/microsoft-365/microsoft-teams/download-app" target="_blank"><img class="img-responsive logo-descarga-teams" src="../img/teams/windows.svg" alt="Descarga Micrsoft Teams"></a>
+								<strong>Windows</strong>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-sm-6 col-sm-offset-3 ultimo-parrafo-teams">
+					<div class="alert alert-warning bs-calltoaction-warning">
+						<p class="no-margin">Teams es una herramienta que puede ser de gran utilidad. ¡Aprovéchala!</p>
+					</div>
+				</div>
+
+				<div class="col-sm-12 bloque_siguiente_navega">
+				<div class="wow animated bounce infinite" data-wow-duration="2s">
+				<a href="/niveles/navega-seguro">
+					<div class="col-sm-6 col-sm-offset-3 interior_bloque_siguiente bloque_navega con-padding">
+					<div class="glyph-icon flaticon-shield"></div>
+					<div class="titulo_siguiente">Navega seguro</div>
+					<p class="siguiente_nivel">Ir al siguiente nivel</p>
+				</div>
+				</a>
+				</div>
+				</div>
+
+		</div>
+		</div>
+
+@endsection

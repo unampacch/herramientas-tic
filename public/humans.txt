@@ -1,0 +1,28 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    <name> -- <role> -- <twitter>
+
+# THANKS
+
+    <name>
+
+
+
+# SITE
+
+    Last update: YYYY/MM/DD
+
+    Standards: HTML5, CSS3,..
+
+
+    Components: Modernizr, jQuery, etc.
+
+
+    Software: Software used for the development
+# TECHNOLOGY COLOPHON
+
+    CSS3, HTML5, PHP 7, SlimFramework 3
+    Apache Server Configs, jQuery, Modernizr, Bootstrap 3

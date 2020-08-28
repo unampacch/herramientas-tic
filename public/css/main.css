@@ -1,0 +1,25 @@
+#cuestionario input[type="radio"] {
+  display: none;
+}
+
+#cuestionario label {
+  color: grey;
+}
+
+#cuestionario .clasificacion {
+  direction: rtl;
+  unicode-bidi: bidi-override;
+  width: 300px;
+}
+#cuestionario p.clasificacion label{
+    font-size: 50px;
+}
+
+#cuestionario p.clasificacion label:hover,
+#cuestionario p.clasificacion label:hover ~ label {
+  color: orange;
+}
+
+#cuestionario p.clasificacion input[type="radio"]:checked ~ label {
+  color: orange;
+}
