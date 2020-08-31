@@ -1,0 +1,406 @@
+{% extends 'templates/app.twig' %}
+
+{% set page_title = 'Niveles' %}
+
+{% block content %}
+
+<body class="scribble-transition">
+
+    <div id="preloader">
+        <div id="status">&nbsp;</div>
+    </div>
+
+    <header class="pen">
+        <nav class="navbar navbar-default" role="navigation">
+            <div class="continer-fluid">
+
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle plus collapsed" data-toggle="collapse" data-target="#navbar-collapse-plus" aria-expanded="false">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <img class="logo_unam_menu" src="../img/logo-unam.svg" alt="UNAM">
+                    <img class="logo_cch_menu" src="../img/logo-cch.svg" alt="CCH">
+                    <p class="navbar-text visible-xs-inline-block">
+                        <span class="nombre-usuario">{{auth.user}}</span></p>
+                </div>
+
+                <div class="collapse navbar-collapse" id="navbar-collapse-plus">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a class="creditos_link cd-modal-trigger" href="#modal-1">Créditos</a>
+                        </li>
+                        <li>
+                            <a class="bibliografia_link cd-modal-trigger" href="#modal-directorio">Directorio</a>
+                        </li>
+                        <li>
+                            <a class="bibliografia_link cd-modal-trigger" href="#modal-2">Bibliografía</a>
+                        </li>
+                        <li>
+                            <p class="navbar-text usuario ayuda-mail hidden-sm">Ayuda:
+                                <a class="bibliografia_link" href="mailto:soportec@cch.unam.mx">soportec@cch.unam.mx</a>
+                            </p>
+                        </li>
+                    </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <p class="navbar-text usuario hidden-xs">Bienvenido
+                                <span class="nombre-usuario">{{ auth.user.Nombre }}</span></p>
+                        </li>
+                        <li>
+                            <a class="navbar-btn boton-salir" href="/salir">Cerrar sesión</a>
+
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container-fluid niveles">
+        <div class="row">
+            <a href="/niveles/cuenta-cch">
+                <div class="col-sm-3 project">
+                    <div class="project-hover">
+                        <div class="glyph-icon flaticon-mail"></div>
+                        <h2>Tu cuenta<br class="hidden-xs">
+                            CCH</h2>
+                        <hr>
+                        <p>Obtén tu correo<br class="hidden-xs hidden-sm">y conócelo</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/niveles/navega-seguro">
+                <div class="col-sm-3 project project-2">
+                    <div class="project-hover">
+                        <div class="glyph-icon flaticon-shield"></div>
+                        <h2>Navega<br class="hidden-xs hidden-sm">
+                            seguro</h2>
+                        <hr>
+                        <p>Evita virus y descargas<br class="hidden-xs">
+                            poco seguras</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/niveles/busqueda">
+                <div class="col-sm-3 project project-3">
+                    <div class="project-hover">
+                        <div class="glyph-icon flaticon-medical"></div>
+                        <h2>Salte<br class="hidden-xs hiddden-sm">
+                            del rincón</h2>
+                        <hr>
+                        <p>Conoce sitios seguros<br class="hidden-xs">
+                            y confiables</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/niveles/organizate">
+                <div class="col-sm-3 project project-4">
+                    <div class="project-hover">
+                        <div class="glyph-icon flaticon-shapes"></div>
+                        <h2>Organízate<br class="hidden-xs hidden-sm">
+                            y comparte</h2>
+                        <hr>
+                        <p>Aprende a compartir<br class="hidden-xs">
+                            información</p>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+    </div>
+
+    <div class="cd-modal" id="modal-1">
+        <div class="modal-content">
+            <div class="interior-modal">
+
+                <h2>Créditos</h2>
+
+                <p class="titulo-modal">Herramientas TIC para el aprendizaje</p>
+
+                <dl>
+                    <dt>Coordinación</dt>
+                    <dd>Marina Kriscautzky Laxague</dd>
+                    <dd>Elizabeth Martínez Sánchez</dd>
+                    <dd>Rocío Angélica Hernández Rodríguez</dd>
+                    <dd>Eliangel Navarro Flores</dd>
+                    <dd>Armando Rodríguez Arguijo</dd>
+                </dl>
+
+                <dl>
+                    <dt>Diseño instruccional</dt>
+                    <dd>Eliangel Navarro Flores</dd>
+                    <dd>Jazmín Acevedo Santiago</dd>
+                    <dd>María Cristina Rico León</dd>
+                    <dd>Rocío Angélica Hernández Rodríguez</dd>
+                    <dd>Yadira Jannet Jiménez Taboada</dd>
+                </dl>
+
+                <dl>
+                    <dt>Diseño gráfico y multimedia</dt>
+                    <dd>Luis David Torres Ortuño</dd>
+                    <dd>Jesús Rodrigo Aizpuru Parra</dd>
+                </dl>
+
+                <dl>
+                    <dt>Programación</dt>
+                    <dd>Jonathan Bailon Segura</dd>
+                </dl>
+
+                <dl>
+                    <dt>Desarrollo de contenidos</dt>
+                    <dd>Eliangel Navarro Flores</dd>
+                    <dd>Jazmín Acevedo Santiago</dd>
+                    <dd>María Cristina Rico León</dd>
+                    <dd>Rocío Angélica Hernández Rodríguez</dd>
+                    <dd>Yadira Jannet Jiménez Taboada
+                    </dd>
+                </dl>
+
+            </div>
+            <!-- .modal-content -->
+
+            <a href="#0" class="modal-close">Cerrar</a>
+        </div>
+    </div>
+    <!-- .cd-modal -->
+
+    <div class="cd-modal" id="modal-2">
+        <div class="modal-content">
+            <div class="interior-modal">
+
+                <h2>Bibliografía</h2>
+
+                <p class="titulo-modal">Fuentes electrónicas</p>
+
+                <dl>
+                    <dt>BBC (2017). Session 4 en
+                        <i>Learning English.</i>
+                        Recuperado de</dt>
+                    <dt>
+                        <a href="http://www.bbc.co.uk/learningenglish/english/course/eiam/unit-1/session-4" target="_blank">http://www.bbc.co.uk/learningenglish/english/course/eiam/unit-1/session-4</a>
+                    </dt>
+                </dl>
+
+                <dl>
+                    <dt>Bonfil O., M. (2018). "Hasta el agua pura es pura química" en
+                        <i>Revista ¿Cómo ves?.</i>
+                        Recuperado de</dt>
+                    <dt>
+                        <a href="http://www.comoves.unam.mx" target="_blank">http://www.comoves.unam.mx</a>
+                    </dt>
+                </dl>
+
+                <dl>
+                    <dt>Cultura UNAM (2018). Descarga cultura. Recuperado de</dt>
+                    <dt>
+                        <a href="https://descargacultura.unam.mx/app1" target="_blank">https://descargacultura.unam.mx/app1</a>
+                    </dt>
+                </dl>
+
+                <dl>
+                    <dt>Dirección General del Colegio de Ciencias y Humanidades (2017).
+                        <i>Guía de configuración de Conexión a la RIU para dispositivos con Sistema Operativo Android.</i>
+                        Recuperado de</dt>
+                    <dt>
+                        <a href="http://www.riu.unam.mx/manuales/Manual-Android.pdf" target="_blank">http://www.riu.unam.mx/manuales/Manual-Android.pdf</a>
+                    </dt>
+                </dl>
+
+                <dl>
+                    <dt>Dirección General del Colegio de Ciencias y Humanidades (2017).
+                        <i>Manual de usuario para el correo electrónico Office 365.</i>
+                        Recuperado de</dt>
+                    <dt>
+                        <a href="http://tutorial.cch.unam.mx/bloque4/docs/manual_acceso_correo_cch.pdf" target="_blank">http://tutorial.cch.unam.mx/bloque4/docs/manual_acceso_correo_cch.pdf</a>
+                    </dt>
+                </dl>
+
+                <dl>
+                    <dt>Escuela Nacional Colegio de Ciencias y Humanidades (2017). Portal académico del CCH. Recuperado de</dt>
+                    <dt>
+                        <a href="https://portalacademico.cch.unam.mx/" target="_blank">https://portalacademico.cch.unam.mx/</a>
+                    </dt>
+                </dl>
+
+                <dl>
+                    <dt>Hábitat Puma (2015). Edita un texto sobre fósiles vivientes en
+                        <i>Retos TIC.</i>
+                    </dt>
+                    <dt>
+                        <a href="https://retos.educatic.unam.mx/login/index.php" target="_blank">https://retos.educatic.unam.mx/login/index.php</a>
+                    </dt>
+                </dl>
+
+                <dl>
+                    <dt>Lyricstraining (2018).
+                        <i>Aprendiendo francés.</i>
+                        Recuperado de</dt>
+                    <dt>
+                        <a href="https://es.lyricstraining.com/fr/" target="_blank">https://es.lyricstraining.com/fr/</a>
+                    </dt>
+                </dl>
+
+                <dl>
+                    <dt>Microsoft Educación. (s. f.).
+                        <i>Tutoriales para una educación a distancia.</i>
+                        Recuperado 30 de julio 2020, de</dt>
+                    <dt>
+                        <a href="https://www.sev.gob.mx/educacion-basica/wp-content/uploads/2020/07/Libro_Microsoft_Final.pdf" target="_blank">https://www.sev.gob.mx/educacion-basica/wp-content/uploads/2020/07/Libro_Microsoft_Final.pdf</a>
+                    </dt>
+                </dl>
+
+                <dl>
+                    <dt>OCU (2018). El Mundo (2017)
+                        <i>Cinco consejos sobre seguridad en Internet que deberías seguir.</i>
+                        Recuperado de</dt>
+                    <dt>
+                        <a href="http://www.elmundo.es/tecnologia/2017/02/07/5899b984e5fdead0758b4600.html" target="_blank">http://www.elmundo.es/tecnologia/2017/02/07/5899b984e5fdead0758b4600.html</a>
+                    </dt>
+                </dl>
+
+                <dl>
+                    <dt>
+                        <i>Tus cuentas de internet son tuyas.</i>
+                        Recuperado de</dt>
+                    <dt>
+                        <a href="https://www.ocu.org/viveinternetseguro/tus-cuentas-son-tuyas.html" target="_blank">https://www.ocu.org/viveinternetseguro/tus-cuentas-son-tuyas.html</a>
+                    </dt>
+                </dl>
+
+                <dl>
+                    <dt>RIU Red Inalámbrica Universitaria (2017). Recuperado de</dt>
+                    <dt>
+                        <a href="http://www.riu.unam.mx/" target="_blank">http://www.riu.unam.mx/</a>
+                    </dt>
+                </dl>
+
+                <dl>
+                    <dt>UNAM (2017). Red Universitaria de Aprendizaje. Recuperado de</dt>
+                    <dt>
+                        <a href="https://www.rua.unam.mx/portal/" target="_blank">https://www.rua.unam.mx/portal/</a>
+                    </dt>
+                </dl>
+
+                <dl>
+                    <dt>UNAM (2017).
+                        <i>Correo comunidad Office 365.</i>
+                        Recuperado de</dt>
+                    <dt>
+                        <a href="http://www.comunidad.unam.mx/" target="_blank">http://www.comunidad.unam.mx/</a>
+                    </dt>
+                </dl>
+
+                <dl>
+                    <dt>UNAM (2015)
+                        <i>¿Las contraseñas que usas son seguras?.</i>
+                        Recuperado de</dt>
+                    <dt>
+                        <a href="https://retos.educatic.unam.mx/course/view.php?id=5" target="_blank">https://retos.educatic.unam.mx/course/view.php?id=5</a>
+                    </dt>
+                </dl>
+
+                <dl>
+                    <dt>UNAM (2015) Descargas seguras en Internet. Recuperado de</dt>
+                    <dt>
+                        <a href="https://retos.educatic.unam.mx/course/view.php?id=5" target="_blank">https://retos.educatic.unam.mx/course/view.php?id=5</a>
+                    </dt>
+                </dl>
+
+                <p class="titulo-modal">Video</p>
+
+                <dl>
+                    <dt>Microsoft Latinoamerica. (2019, 13 noviembre).
+                        <i>Microsoft Teams en el salón de clases</i>
+                        [Vídeo]. Recuperado de</dt>
+                    <dt>
+                        <a href="https://youtu.be/5sYK8XjEYXY" target="_blank">https://youtu.be/5sYK8XjEYXY</a>
+                    </dt>
+                </dl>
+
+            </div>
+            <!-- .modal-content -->
+
+            <a href="#0" class="modal-close">Cerrar</a>
+        </div>
+    </div>
+    <!-- .cd-modal -->
+
+    <div class="cd-modal" id="modal-directorio">
+        <div class="modal-content">
+            <div class="interior-modal">
+
+                <h2>Directorio</h2>
+
+                <p class="titulo-modal">Dirección General</p>
+
+                <dl>
+                    <dt>Director General</dt>
+                    <dd>Dr. Benjamín Barajas Sánchez</dd>
+                </dl>
+
+                <dl>
+                    <dt>Secretaria General</dt>
+                    <dd>Dra. María Leticia de Anda Munguía</dd>
+                </dl>
+
+                <dl>
+                    <dt>Secretaria Académica</dt>
+                    <dd>Lic. María Elena Juárez Sánchez</dd>
+                </dl>
+
+                <dl>
+                    <dt>Secretaria Administrativa</dt>
+                    <dd>Lic. Rocío Carrillo Camargo</dd>
+                </dl>
+
+                <dl>
+                    <dt>Secretaria de Servicios de Apoyo al Aprendizajes</dt>
+                    <dd>Dra. Luz Angélica Hernández Carbajal</dd>
+                </dl>
+
+                <dl>
+                    <dt>Secretario de Planeación</dt>
+                    <dd>Dr. Javier Consuelo Hernández</dd>
+                </dl>
+
+                <dl>
+                    <dt>Secretaria Estudiantil</dt>
+                    <dd>Lic. Mayra Monsalvo Carmona</dd>
+                </dl>
+
+                <dl>
+                    <dt>Secretaria de Programas Institucionales</dt>
+                    <dd>Lic. María Isabel Díaz del Castillo Prado</dd>
+                </dl>
+
+                <dl>
+                    <dt>Secretaria de Comunicación Institucional</dt>
+                    <dd>Lic. Maricela González Delgado</dd>
+                </dl>
+
+                <dl>
+                    <dt>Secretario de Informática</dt>
+                    <dd>Ing. Armando Rodríguez Arguijo</dd>
+                </dl>
+
+            </div>
+            <!-- .modal-content -->
+
+            <a href="#0" class="modal-close">Cerrar</a>
+        </div>
+    </div>
+    <!-- .cd-modal -->
+
+    <div class="cd-transition-layer" data-frame="38">
+        <div class="bg-layer"></div>
+    </div>
+    <!-- .cd-transition-layer -->
+
+</body>
+{% endblock %}

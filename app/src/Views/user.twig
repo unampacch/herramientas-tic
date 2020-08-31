@@ -1,0 +1,12 @@
+{% extends 'templates/app.twig' %}
+
+{% set page_title = 'Usuarios' %}
+
+{% block content %}
+    <h1>Hola Mundo</h1>
+    <p>{{sid}}</p>
+    <p>{{existe}}</p>
+    {% for item in Usuarios %}
+        <p> {{item.Nombre}}  {{item.Apellidos}}</p>
+    {% endfor %}
+{% endblock %}

@@ -1,0 +1,173 @@
+{% extends 'templates/app.twig' %}
+
+{% set page_title = 'Navega seguro' %}
+
+{% block content %}
+
+	<div id="preloader">
+		<div id="status">&nbsp;</div>
+	</div>
+
+	<nav class="cd-stretchy-nav">
+		<a class="cd-nav-trigger" href="#0">
+			<span aria-hidden="true"></span>
+		</a>
+		<ul>
+			<li><a href="/niveles"><span>Inicio</span></a></li>
+			<li><a href="/niveles/cuenta-cch"><span>Cuenta</span></a></li>
+			<li><a href="/niveles/navega-seguro" class="active"><span>Navega</span></a></li>
+			<li><a href="/niveles/busqueda"><span>Busca</span></a></li>
+			<li><a href="/niveles/organizate"><span>Organiza</span></a></li>
+		</ul>
+		<span aria-hidden="true" class="stretchy-nav-bg"></span>
+	</nav>
+
+	<div class="container-fluid no-margin">
+		<div class="row">
+
+			<div class="col-sm-12 project project-2 nivel-portada">
+				<div class="project-hover">
+					<div class="glyph-icon flaticon-mail"></div>
+					<h2>Navega<br class="hidden-xs"> seguro</h2>
+					<p>Evita virus y descargas poco seguras</p>
+				</div>
+
+				<a class="page-scroll" href="#actividades"><button class="scroll texto-icono">Scroll</button></a>
+			</div>
+
+			<div class="col-sm-8 col-sm-offset-2" id="actividades">
+			<div class="wow animated fadeIn" data-wow-duration="2s">
+				<div class="videoWrapper videoWrapper169 js-videoWrapper">
+					<iframe class="videoIframe js-videoIframe" src="" frameborder="0" allowtransparency="true" allowfullscreen="" data-src="https://www.youtube.com/embed/L5iXveL3ovo?autoplay=1&amp; modestbranding=0&amp;rel=0&amp;hl=es"></iframe>
+					<button class="videoPoster js-videoPoster" style="background-image: url(../img/poster_video_navega_seguro.png)">Reproducir video</button>
+				</div>
+			</div>
+			</div>
+
+			<div class="col-sm-6 col-sm-offset-3">
+
+				<p>Como has observado, la seguridad es muy importante por lo que te sugerimos que consideres y tomes algunas precauciones si quieres descargar algo de la red, puesto que es común que te encuentres con publicidad engañosa o enlaces confusos. Fíjate bien: si vas a descargar un software que sea desde el sitio oficial, y que señale que sea una descarga segura.</p>
+
+				<p>Te invitamos a realizar el siguiente reto, así que lee atentamente las instrucciones. </p>
+
+			</div>
+
+			<div class="col-sm-10 linea_navega_izq">
+			</div>
+
+			<div class="col-sm-6 col-sm-offset-3">
+				<div class="wow animated fadeIn" data-wow-duration="2s">
+					<div class="actividad actividad_navega_numero">Actividad 3</div>
+					<h2 class="actividad_titulo">Seguridad al navegar</h2>
+					<p class="no-margin">Con la siguiente actividad verás que tan hábil eres para distinguir un enlace correcto, ¿sabes dónde dar clic para descargar el editor de PDF? Selecciona la opción que consideres segura.
+					</p>
+			</div>
+			</div>
+
+			<div class="col-sm-6 col-sm-offset-3">
+				<div class="col-sm-12 simulador no-padding">
+
+					<a data-toggle="modal" data-target="#incorrecto" href="#">
+						<img class="img-responsive con-padding" src="../img/banner_mackepper.png" alt="Navega seguro" style="padding-top: 15px;">
+					</a>
+
+					<div class="col-sm-12 col-md-12 col-lg-8">
+						<a data-toggle="modal" data-target="#incorrecto" href="#">
+							<img class="img-responsive" src="../img/adobe_reader-descargar.jpg" style="margin-top: 30px;" alt="Navega seguro">
+						</a>
+					</div>
+
+					<div class="col-sm-12 col-md-12 col-lg-4">
+						<div class="card-base">
+							<div class="card-icon"><div id="widgetCardIcon" class="imagecard"><span class="glyphicon glyphicon-download-alt"></span></div>
+							<div class="card-data widgetCardData">
+								<h2 class="box-title">PDF</h2>
+								<p class="card-block text-center">Descargar de forma segura</p>
+								<a data-toggle="modal" data-target="#incorrecto" href="#" class="anchor btn btn-success"> <i class="fa fa-paper-plane" aria-hidden="true"></i> Descargar software</a></div>
+							</div>
+							<div class="space"></div>
+						</div>
+
+						<a data-toggle="modal" data-target="#incorrecto" href="#"><button type="button" class="btn btn-primary btn-lg btn-block">Descargar PDF</button></a>
+					</div>
+
+					<div class="col-sm-12">
+
+						<a href="#" data-toggle="modal" data-target="#correcto" class="text-center"> <p class="link">Descargar Adobe Reader</p> </a>
+
+						<div class="download download-danger">
+							<h1><i class="icon-download-danger"></i> DESCARGA GRATIS </h1>
+							<ul>
+								<li><a href="#" data-toggle="modal" data-target="#incorrecto">PDF</a></li>
+								<li><a href="#" data-toggle="modal" data-target="#incorrecto">DOC</a></li>
+								<li><a href="#" data-toggle="modal" data-target="#incorrecto">XLS</a></li>
+								<li><a href="#" data-toggle="modal" data-target="#incorrecto">TXT</a></li>
+							</ul>
+						</div>
+						<div class="download download-success">
+							<h1><i class="icon-download-alt"></i> DESCARGA GRATIS </h1>
+							<ul>
+								<li><a href="#" data-toggle="modal" data-target="#incorrecto">PDF</a></li>
+								<li><a href="#" data-toggle="modal" data-target="#incorrecto">DOC</a></li>
+								<li><a href="#" data-toggle="modal" data-target="#incorrecto">XLS</a></li>
+								<li><a href="#" data-toggle="modal" data-target="#incorrecto">TXT</a></li>
+							</ul>
+						</div>
+					</div>
+
+					<div id="incorrecto" class="modal fade" role="dialog">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal">×</button>
+									<h3 class="modal-title">¡Error!</h3>
+								</div>
+								<div class="modal-body interior_incorrecto">
+									<p>Acabas de descargar otro software distinto, probablemente con virus. Fíjate bien en los textos que se encuentran cerca de los botones de descarga</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div id="correcto" class="modal fade" role="dialog">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header modal-correcto">
+									<button type="button" class="close" data-dismiss="modal">×</button>
+									<h3 class="modal-title">¡Correcto!</h3>
+								</div>
+								<div class="modal-body interior_correcto">
+									<p>A veces puede ser difícil ubicar el icono correcto de descarga, así que presta atención al nombre del archivo  y a su extensión, debe corresponder con lo que quieres descargar.</p>
+									<p>Ten cuidado con los archivos ejecutables y comprimidos (.exe, .dmg, .zip o .rar). Evita descargar archivos a menos que sea desde los sitios oficiales.</p>
+
+									<p><a href="../docs/softwares_confiables.pdf" target="_blank" class="text-center">Descarga el siguiente documento con un listado de softwares confiables<br>
+									<span class="glyphicon glyphicon-download" aria-hidden="true"></span>
+									</a></p>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-sm-6 col-sm-offset-3">
+				<hr class="separa_nivel_2">
+			</div>
+
+
+			<div class="col-sm-12 bloque_siguiente_busqueda">
+			<div class="wow animated bounce infinite" data-wow-duration="2s">
+				<a href="/niveles/busqueda">
+					<div class="col-sm-6 col-sm-offset-3 interior_bloque_siguiente bloque_busqueda con-padding">
+						<div class="glyph-icon flaticon-medical"></div>
+						<div class="titulo_siguiente">Salte del rincón</div>
+						<p class="siguiente_nivel">Ir al siguiente nivel</p>
+					</div>
+				</a>
+			</div>
+		</div>
+		</div>
+	</div>
+
+{% endblock %}
