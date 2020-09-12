@@ -3,6 +3,7 @@ namespace App\Controllers;
 
 use App\Models\Usuarios;
 use App\Models\Avance;
+use App\Models\Logs;
 
 class NivelesController extends BaseController{
     private $mensaje = 'Primero debes ingresar para ver el contenido';
@@ -14,6 +15,8 @@ class NivelesController extends BaseController{
             return $response->withHeader('Location', $this->router->urlFor('home'));
         }
 
+        Logs::registra_log( $this->session->id, 'View', '/niveles' );
+
         return $this->view->render($response,'/sections/niveles.twig');
     }
 
@@ -24,6 +27,8 @@ class NivelesController extends BaseController{
         }
 
         Avance::registro($this->session->id, 1);
+        Logs::registra_log( $this->session->id, 'View', '/niveles/cuenta-cch' );
+
         return $this->view->render($response,'/sections/levels/cuenta-cch.twig');
     }
 
@@ -34,6 +39,8 @@ class NivelesController extends BaseController{
         }
 
         Avance::registro($this->session->id, 2);
+        Logs::registra_log( $this->session->id, 'View', '/niveles/navega-seguro' );
+
         return $this->view->render($response,'/sections/levels/navega-seguro.twig');
     }
 
@@ -44,6 +51,8 @@ class NivelesController extends BaseController{
         }
 
         Avance::registro($this->session->id, 3);
+        Logs::registra_log( $this->session->id, 'View', '/niveles/busqueda' );
+
         return $this->view->render($response,'/sections/levels/busqueda.twig');
     }
 
@@ -54,6 +63,8 @@ class NivelesController extends BaseController{
         }
 
         Avance::registro($this->session->id, 4);
+        Logs::registra_log( $this->session->id, 'View', '/niveles/organizate' );
+
         return $this->view->render($response,'/sections/levels/organizate.twig');
     }
 }
