@@ -20,10 +20,13 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <img class="logo_unam_menu" src="../img/logo-unam.svg" alt="UNAM">
-                    <img class="logo_cch_menu" src="../img/logo-cch.svg" alt="CCH">
+                    <a href="https://www.unam.mx/" target="_blank">
+                        <img class="logo_unam_menu" src="../img/logo-unam.svg" alt="UNAM"></a>
+                    <a href="https://www.cch.unam.mx/" target="_blank">
+                        <img class="logo_cch_menu" src="../img/logo-cch.svg" alt="CCH">
+                    </a>
                     <p class="navbar-text visible-xs-inline-block">
-                        <span class="nombre-usuario">{{auth.user}}</span></p>
+                        <span class="nombre-usuario">{{auth.user.Nombre }} {{auth.user.Apellidos}}</span></p>
                 </div>
 
                 <div class="collapse navbar-collapse" id="navbar-collapse-plus">
@@ -38,6 +41,9 @@
                             <a class="bibliografia_link cd-modal-trigger" href="#modal-2">Bibliografía</a>
                         </li>
                         <li>
+                            <a class="bibliografia_link" href="/cuestionario">Cuestionario</a>
+                        </li>
+                        <li>
                             <p class="navbar-text usuario ayuda-mail hidden-sm">Ayuda:
                                 <a class="bibliografia_link" href="mailto:soportec@cch.unam.mx">soportec@cch.unam.mx</a>
                             </p>
@@ -47,7 +53,7 @@
                     <ul class="nav navbar-nav navbar-right">
                         <li>
                             <p class="navbar-text usuario hidden-xs">Bienvenido
-                                <span class="nombre-usuario">{{ auth.user.Nombre }}</span></p>
+                                <span class="nombre-usuario">{{auth.user.Nombre }} {{auth.user.Apellidos}}</span></p>
                         </li>
                         <li>
                             <a class="navbar-btn boton-salir" href="/salir">Cerrar sesión</a>
@@ -397,10 +403,25 @@
     </div>
     <!-- .cd-modal -->
 
-    <div class="cd-transition-layer" data-frame="38">
+    <!-- MODAL BIENVENIDA -->
+    <div class="cd-modal visible" id="modal-bienvenida">
+        <div class="modal-content">
+            <div class="interior-modal">
+                <h2>¡Bienvenido a Herramientas TIC para el Aprendizaje!</h2>
+                <p>Esperamos que este curso te sea de utilidad. Recuerda que al término del último nivel
+                    <strong>“Organízate y Comparte”</strong>
+                    debes contestar un cuestionario que valide que concluiste este curso.</p>
+                <a href="#0" class="modal-close">¡Hora de comenzar!</a>
+            </div>
+        </div>
+    </div>
+    <!-- MODAL BIENVENIDA -->
+
+    <div class="cd-transition-layer visible" data-frame="38">
         <div class="bg-layer"></div>
     </div>
     <!-- .cd-transition-layer -->
 
 </body>
+
 {% endblock %}

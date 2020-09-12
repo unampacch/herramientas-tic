@@ -970,6 +970,19 @@ ul[class*="list-bullet-3"] li {
   color: #a7427f;
 }
 
+ul[class*="list-bullet-white"] li {
+  color: #f1f1f1;
+}
+
+.list-bullet-white {
+  margin: 15px 0;
+  padding: 0 15px;
+}
+
+.list-bullet-white li:before {
+  color: #f1f1f1;
+}
+
 .numeros_nivel_1 {
   color: #e4982c;
   font-weight: 500;
@@ -2543,9 +2556,113 @@ textarea.input-minimal {
   transition: box-shadow 0.4s linear;
 }
 
-.retro:hover {
+.retro:hover, .retro:focus {
   box-shadow: inset 0px 0px 0px 5px #ffbd40;
 }
+
+.boton-login {
+  transition: all 1s;
+}
+
+/* MODAL BIENVENIDA */
+.cd-modal#modal-bienvenida {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.scribble-transition .cd-modal#modal-bienvenida .modal-content {
+  max-width: 768px;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cd-modal#modal-bienvenida .interior-modal {
+  max-width: 768px;
+}
+
+.cd-modal#modal-bienvenida .modal-content {
+  overflow: hidden;
+}
+
+.cd-modal#modal-bienvenida .modal-close {
+  right: 2.5%;
+}
+
+.scribble-transition .cd-modal#modal-bienvenida {
+  background: transparent;
+}
+
+.cd-modal#modal-bienvenida p.titulo-modal {
+  margin: 40px 0 0 0;
+  font-weight: bold;
+}
+
+.cd-transition-layer.visible {
+  opacity: 0.8 !important;
+}
+
+.cd-modal#modal-bienvenida a.modal-close {
+  background-image: linear-gradient(to right, #e4b72c, #eb6544);
+  color: #ffffff !important;
+  display: inline-block;
+  border-radius: 1500px;
+  padding: 10px 20px !important;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.35px;
+  position: relative;
+  z-index: 1;
+  opacity: 1;
+  box-shadow: 0 7px 15px 0 rgba(0, 0, 0, .20);
+  transition: all 1s;
+  margin-top: 7px;
+  margin-bottom: 7px;
+  width: auto;
+  height: auto;
+  text-indent: unset;
+  white-space: unset;
+}
+
+.cd-modal#modal-bienvenida a:hover.modal-close {
+  box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0);
+}
+
+.cd-modal#modal-bienvenida .modal-content {
+  box-shadow: unset;
+  -webkit-box-shadow: unset;
+}
+
+.cd-modal#modal-bienvenida .modal-close::before, .cd-modal#modal-bienvenida .modal-close::after {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .cd-modal#modal-bienvenida .interior-modal {
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 767px) {
+  .scribble-transition .cd-modal#modal-bienvenida .modal-content {
+    max-width: 90vw;
+    height: 90vh;
+  }
+
+  .cd-modal#modal-bienvenida .modal-close {
+    top: 2%;
+    right: 3%
+  }
+
+  .cd-modal#modal-bienvenida .modal-content {
+    padding: 6em 5%;
+  }
+}
+
+/* MODAL BIENVENIDA */
 
 /* Actualización 2020 */
 @media (max-width: 1690px) {
@@ -2738,6 +2855,16 @@ textarea.input-minimal {
   }
 }
 
+
+@media (max-width: 1080px) {
+.navbar-nav>li, .navbar-text, .nombre-usuario {
+  font-size: 14px
+}
+.navbar-nav>li a {
+  padding: 15px 5px;
+}
+}
+
 @media (max-width: 768px) {
   .actividad_cuenta_numero {
     font-size: 18px;
@@ -2875,6 +3002,14 @@ textarea.input-minimal {
   }
 
   .actividad_titulo {
+    font-size: 24px;
+  }
+
+  .navbar-nav>li, .navbar-text, .nombre-usuario {
+    font-size: 16px
+  }
+
+  .cd-modal h1, .cd-modal h2 {
     font-size: 24px;
   }
 }
