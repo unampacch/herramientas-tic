@@ -5,6 +5,7 @@ use Slim\App;
 use App\Controllers\InicioController;
 use App\Controllers\HomeController;
 use App\Controllers\NivelesController;
+use App\Controllers\CuestionarioController;
 use App\Controllers\Auth\AuthController;
 
 
@@ -22,3 +23,5 @@ $app->group('/niveles', function ($group) {
   $group->get('/organizate', NivelesController::class . ':showOrganizate');
   $group->get('/busqueda', NivelesController::class . ':showBusqueda');
 });
+
+$app->get('/cuestionario', CuestionarioController::class . ':show');
