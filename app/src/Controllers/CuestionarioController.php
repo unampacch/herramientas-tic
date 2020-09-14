@@ -10,7 +10,7 @@ class CuestionarioController extends BaseController{
     public function show($request, $response){
 
         if(!$this->auth->check()){
-            $this->flash->addMessage('error', $this->mensaje);
+            $this->flash->addMessage('error', "Primero debes ingresar para ver el contenido");
             return $response->withHeader('Location', $this->router->urlFor('home'));
         }
 
