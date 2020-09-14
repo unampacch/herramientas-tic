@@ -1,11 +1,23 @@
 {% if flash.getMessage('info') %}
-	<div class="alert alert-info">
+	<div class="alert alert-info" role="alert">
+        <span class="glyphicon glyphicon-alert" aria-hidden="true"></span>
+        <span class="sr-only">Info:</span>
 		{{ flash.getMessage('info') | first }}
 	</div>
 {% endif %}
 
 {% if flash.getMessage('error') %}
-	<div class="alert alert-danger">
+	<div class="alert alert-danger" role="alert">
+        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+        <span class="sr-only">Error:</span>
 		{{ flash.getMessage('error') | first }}
 	</div>
+{% endif %}
+
+{% if flash.getMessage('success') %}
+    <div class="alert alert-success" role="alert">
+        <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+        <span class="sr-only">Success:</span>
+        {{ flash.getMessage('success') | first }}
+    </div>
 {% endif %}
