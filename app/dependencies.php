@@ -54,6 +54,8 @@ $container->set('view', function ($container) use ($app) {
 
     $view->getEnvironment()->addGlobal('flash', $container->get('flash'));
 
+    $view->getEnvironment()->addGlobal('modal', $container->get('auth')->firstModal());
+
 	return $view;
 });
 

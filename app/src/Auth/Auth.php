@@ -59,4 +59,16 @@ class Auth {
     private function verifica_contrasena($corigen, $cdestino){
         return $corigen == $cdestino ? true : false;
     }
+
+    public function firstModal(){
+        $session = new \SlimSession\Helper();
+
+        if( isset($_COOKIE['firstmodal']) ) {
+            if ( $_COOKIE['firstmodal'] == $session->id ) {
+                return true;
+            }
+        }
+
+        return false;
+    }
 }

@@ -403,6 +403,7 @@
     </div>
     <!-- .cd-modal -->
 
+    {% if modal == false %}
     <!-- MODAL BIENVENIDA -->
     <div class="cd-modal visible" id="modal-bienvenida">
         <div class="modal-content">
@@ -421,7 +422,7 @@
         <div class="bg-layer"></div>
     </div>
     <!-- .cd-transition-layer -->
-
+    {% endif %}
 </body>
 
 {% endblock %}

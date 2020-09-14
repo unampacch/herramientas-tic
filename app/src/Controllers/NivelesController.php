@@ -10,6 +10,10 @@ class NivelesController extends BaseController{
 
     public function show($request, $response){
 
+        if(!isset($_COOKIE['firstmodal'])){
+            setcookie('firstmodal', $this->session->id, time() + 365 * 24 * 60 * 60);
+        }
+
         if(!$this->auth->check()){
             $this->flash->addMessage('error', $this->mensaje);
             return $response->withHeader('Location', $this->router->urlFor('home'));
@@ -67,4 +71,5 @@ class NivelesController extends BaseController{
 
         return $this->view->render($response,'/sections/levels/organizate.twig');
     }
+
 }
