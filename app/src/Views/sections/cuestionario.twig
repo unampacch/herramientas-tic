@@ -81,9 +81,7 @@
                     <h2 class="cuestionario_titulo">Actividad 10. Final</h2>
                     <p class="cuestionario_sub">Cuéntanos que te pareció este recurso</p>
 
-                    @isset($error)
-                    <div class="alert alert-danger" role="alert">Debes de contestar todas las preguntas</div>
-                    @endisset
+                    <div>{% include 'templates/partials/flash.twig' %}</div>
 
                     <hr class="separa_general">
 

@@ -10,7 +10,7 @@ class Logs extends Model {
     protected $guarded = ['Id'];
     public $timestamps = false;
 
-        public static function registra_log($id, $accion, $url) {
+    public static function registra_log($id, $accion, $url) {
 
         $log = static::create([
             'Usuarios_Id' => $id,

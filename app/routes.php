@@ -24,4 +24,5 @@ $app->group('/niveles', function ($group) {
   $group->get('/busqueda', NivelesController::class . ':showBusqueda');
 });
 
-$app->get('/cuestionario', CuestionarioController::class . ':show');
+$app->get('/cuestionario', CuestionarioController::class . ':show')->setName('cuestionario');
+$app->post('/cuestionario', CuestionarioController::class . ':guardaRespuesta');
