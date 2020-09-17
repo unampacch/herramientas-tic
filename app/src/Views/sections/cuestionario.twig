@@ -8,60 +8,34 @@
 <div id="preloader">
     <div id="status">&nbsp;</div>
 </div>
-<header class="pen">
-    <nav class="navbar navbar-default" role="navigation">
-        <div class="continer-fluid">
-
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle plus collapsed" data-toggle="collapse" data-target="#navbar-collapse-plus" aria-expanded="false">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a href="https://www.unam.mx/" target="_blank">
-                    <img class="logo_unam_menu" src="../img/logo-unam.svg" alt="UNAM"></a>
-                <a href="https://www.cch.unam.mx/" target="_blank">
-                    <img class="logo_cch_menu" src="../img/logo-cch.svg" alt="CCH">
-                </a>
-                <p class="navbar-text visible-xs-inline-block">
-                    <span class="nombre-usuario">{{auth.user.Nombre }} {{auth.user.Apellidos}}</span></p>
-            </div>
-
-            <div class="collapse navbar-collapse" id="navbar-collapse-plus">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a class="creditos_link cd-modal-trigger" href="#modal-1">Créditos</a>
-                    </li>
-                    <li>
-                        <a class="bibliografia_link cd-modal-trigger" href="#modal-directorio">Directorio</a>
-                    </li>
-                    <li>
-                        <a class="bibliografia_link cd-modal-trigger" href="#modal-2">Bibliografía</a>
-                    </li>
-                    <li>
-                        <a class="bibliografia_link" href="/cuestionario">Cuestionario</a>
-                    </li>
-                    <li>
-                        <p class="navbar-text usuario ayuda-mail hidden-sm">Ayuda:
-                            <a class="bibliografia_link" href="mailto:soportec@cch.unam.mx">soportec@cch.unam.mx</a>
-                        </p>
-                    </li>
-                </ul>
-
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <p class="navbar-text usuario hidden-xs">Bienvenido
-                            <span class="nombre-usuario">{{auth.user.Nombre }} {{auth.user.Apellidos}}</span></p>
-                    </li>
-                    <li>
-                        <a class="navbar-btn boton-salir" href="/salir">Cerrar sesión</a>
-
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-</header>
+<nav class="cd-stretchy-nav">
+    <a class="cd-nav-trigger" href="#0">
+        <span aria-hidden="true"></span>
+    </a>
+    <ul>
+        <li>
+            <a href="/niveles">
+                <span>Inicio</span></a>
+        </li>
+        <li>
+            <a href="/niveles/cuenta-cch">
+                <span>Cuenta</span></a>
+        </li>
+        <li>
+            <a href="/niveles/navega-seguro" class="active">
+                <span>Navega</span></a>
+        </li>
+        <li>
+            <a href="/niveles/busqueda">
+                <span>Busca</span></a>
+        </li>
+        <li>
+            <a href="/niveles/organizate">
+                <span>Organiza</span></a>
+        </li>
+    </ul>
+    <span aria-hidden="true" class="stretchy-nav-bg"></span>
+</nav>
 <div class="modal-content" style="padding: 0 !important;">
 
     <div class="container-fluid cuestionario">
