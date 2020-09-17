@@ -6,12 +6,12 @@ use Slim\Views\TwigMiddleware;
 use Slim\Psr7\Factory\UriFactory;
 use Slim\Csrf\Guard;
 use Slim\Handlers\Strategies\RequestResponseArgs;
+use App\Models\Cuestionario;
 
 
 $container->set('db', function () use ($capsule) {
 	return $capsule;
 });
-
 
 $container->set('router', function () use ($routeParser) {
     return $routeParser;
@@ -55,6 +55,8 @@ $container->set('view', function ($container) use ($app) {
     $view->getEnvironment()->addGlobal('flash', $container->get('flash'));
 
     $view->getEnvironment()->addGlobal('modal', $container->get('auth')->firstModal());
+
+    $view->getEnvironment()->addGlobal('respondio',Cuestionario::respondio($container->get('session')->id));
 
 	return $view;
 });

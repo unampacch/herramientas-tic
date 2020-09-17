@@ -45,6 +45,7 @@
                     {% if error is defined %}
         	           <div class="alert alert-danger" role="alert">Usuario o contraseña no validos</div>
         	        {% endif %}
+                    <div>{% include 'templates/partials/flash.twig' %}</div>
 
                     <form action="/auth/signin" method="post">
                         <div class="form-group">

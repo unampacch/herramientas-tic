@@ -205,7 +205,7 @@
         <!-- <div class="col-sm-9 col-sm-push-3 linea_organizate_der"> </div> <div class="col-sm-6 col-sm-offset-3 actividad-final"> <div class="wow animated fadeIn" data-wow-duration="2s"> <div class="actividad actividad_organizate_numero">Actividad 9</div>
         <h2 class="actividad_titulo">¡Estás listo!</h2> <p>Para concluir te pedimos que escribas tu correo institucional <strong>(@cch.unam.mx)</strong> en el siguiente espacio:</p> </div> </div> -->
 
-
+        {% if respondio %}
         <div class="col-md-12 bloque_password cuestionario-resuelto">
             <div class="wow animated fadeIn" data-wow-duration="2s">
                 <div class="col-sm-6 col-sm-offset-3 texto-blanco">
@@ -230,11 +230,21 @@
                                 <a href="https://www.microsoft.com/es-mx/microsoft-365/onedrive/download" target="_blank">app de OneDrive</a>
                                 en tus dispositivos móviles.</li>
                         </ul>
-
                     </div>
                 </div>
             </div>
         </div>
+        {% else %}
+        <div id="cuestionario" class="col-sm-12 bloque_siguiente_cuestionario cuestionario-sin-resolver">
+            <div class="wow animated bounce infinite" data-wow-duration="2s">
+                <div class="col-sm-6 col-sm-offset-3 interior_bloque_siguiente bloque_organiza con-padding">
+                    <h2 class="actividad_titulo">CUESTIONARIO DE OPINIÓN</h2>
+                    <p>Para finalizar contesta el cuestionario de opinión que está a continuación:</p>
+                    <a class="navbar-btn boton-salir" href="/cuestionario">Ir al cuestionario</a>
+                </div>
+            </div>
+        </div>
+        {% endif %}
 
         <!-- <div id="correo" class="modal fade" role="dialog"> <div class="modal-dialog modal-correo"> <div class="modal-content"> <div class="modal-header modal-correcto"> <button type="button" class="close" data-dismiss="modal">×</button> <h3
         class="modal-title">Así se ve el mensaje con la contraseña</h3> </div> <div class="modal-body interior_correcto"> <img src="../img/captura_correo_final.jpg" class="img-responsive" alt="Correo Final"> <p>Solo tienes que enviar el correo una sola
