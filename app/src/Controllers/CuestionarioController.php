@@ -13,6 +13,10 @@ class CuestionarioController extends BaseController{
             $this->flash->addMessage('error', "Primero debes ingresar para ver el contenido");
             return $response->withHeader('Location', $this->router->urlFor('home'));
         }
+        if ( Cuestionario::respondio($this->session->id) ){
+            $this->flash->addMessage('success', "Ya has contestado el cuestionario de opinión anteriormente, no es necesario contestarlo de nuevo");
+            return $response->withHeader('Location', $this->router->urlFor('niveles'));
+        }
 
         return $this->view->render($response,'/sections/cuestionario.twig');
     }

@@ -27,4 +27,8 @@ class Cuestionario extends Model {
 
         $respuesta->save();
     }
+
+    public static function respondio($id){
+        return static::where('Usuarios_Id', $id)->exists();
+    }
 }
