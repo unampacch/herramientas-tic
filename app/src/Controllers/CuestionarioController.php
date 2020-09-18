@@ -3,6 +3,8 @@ namespace App\Controllers;
 
 use App\Models\Usuarios;
 use App\Models\Cuestionario;
+use App\Models\Avance;
+use App\Models\Logs;
 use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Message\ServerRequestInterface as Request;
 
@@ -18,6 +20,8 @@ class CuestionarioController extends BaseController{
             return $response->withHeader('Location', $this->router->urlFor('niveles'));
         }
 
+        Logs::registra_log( $this->session->id, 'View', '/cuestionario' );
+
         return $this->view->render($response,'/sections/cuestionario.twig');
     }
 
@@ -31,9 +35,10 @@ class CuestionarioController extends BaseController{
         }elseif ( count($preguntas) == 9 ){
             $this->flash->addMessage('success', "Tus respuestas han sido guardadas con exito");
             Cuestionario::registro($this->session->id, $preguntas);
+            Avance::registro($this->session->id, 5);
         }
 
-        return $response->withHeader('Location', $this->router->urlFor('cuestionario'));
+        return $response->withHeader('Location', $this->router->urlFor('niveles'));
 
     }
 }
