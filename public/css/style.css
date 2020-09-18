@@ -2640,6 +2640,10 @@ textarea.input-minimal {
   display: none;
 }
 
+.flash{
+    margin-top:52px;
+}
+
 @media (max-width: 768px) {
   .cd-modal#modal-bienvenida .interior-modal {
     max-width: 600px;
