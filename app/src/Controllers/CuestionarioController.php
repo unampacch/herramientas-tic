@@ -12,11 +12,11 @@ class CuestionarioController extends BaseController{
     public function show($request, $response){
 
         if(!$this->auth->check()){
-            $this->flash->addMessage('error', "Primero debes ingresar para ver el contenido");
+            $this->flash->addMessage('error', "Primero debes ingresar para ver el contenido.");
             return $response->withHeader('Location', $this->router->urlFor('home'));
         }
         if ( Cuestionario::respondio($this->session->id) ){
-            $this->flash->addMessage('success', "Ya has contestado el cuestionario de opinión anteriormente, no es necesario contestarlo de nuevo");
+            $this->flash->addMessage('success', "Ya has contestado el cuestionario de opinión anteriormente, no es necesario contestarlo de nuevo.");
             return $response->withHeader('Location', $this->router->urlFor('niveles'));
         }
 
@@ -33,7 +33,7 @@ class CuestionarioController extends BaseController{
         if ( count($preguntas) < 9 ) {
             $this->flash->addMessage('error', "Debes de contestar todas las preguntas");
         }elseif ( count($preguntas) == 9 ){
-            $this->flash->addMessage('success', "Tus respuestas han sido guardadas con exito");
+            $this->flash->addMessage('success', "Tus respuestas han sido guardadas con éxito, gracias por tu opinión.");
             Cuestionario::registro($this->session->id, $preguntas);
             Avance::registro($this->session->id, 5);
         }
