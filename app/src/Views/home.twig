@@ -23,7 +23,7 @@
         					<img class="logo_login_unam" src="../img/logo-cch.svg" alt="CCH">
         				</div> -->
 
-        				<hr class="separa_logotipos hidden-md hidden-sm hidden-xs">
+        				<!-- <hr class="separa_logotipos hidden-md hidden-sm hidden-xs"> -->
 
         				<div class="logotipos-cch">
                             <img class="logos_cch" src="img/logo-unam.svg" alt="UNAM">
@@ -40,7 +40,7 @@
 
         	        <h2 class="titulo_login">¡Bienvenido a la UNAM!</h2>
         			<h2 class="leyenda-cch">Ya eres parte del Colegio de Ciencias y Humanidades</h2>
-        	        <p>Para poder ingresar al plantel, debes adquirir una serie de herramientas que te ayudarán a afrontar con éxito los retos que se avecinan, así que regístrate y pon mucha atención.</p>
+        	        <p>Ahora debes adquirir una serie de herramientas y habilidades digitales que te ayudarán a cursar más fácil tu bachillerato. Ingresa y pon mucha atención.</p>
 
                     {% if error is defined %}
         	           <div class="alert alert-danger" role="alert">Usuario o contraseña no validos</div>
@@ -50,11 +50,20 @@
                     <form action="/auth/signin" method="post">
                         <div class="form-group">
             	          	<!--	<label class="control-label">Alumno</label>-->
-            	            <input type="text" name="username" class="form-control input-lg" placeholder="Número de cuenta">
-            	            <div class="input-group input-group-lg">
-                                <input type="text" class="date-picker form-control input-lg" data-date-language="es" data-date-start-view="decade" data-date-format="dd/mm/yyyy" data-date="01/01/1990" value="01/01/1990" name="password" placeholder="DD/MM/AAAA">
-                                <small class="visible-xs visible-sm visible-md">Escribe tu fecha de nacimiento con el siguiente formato: dd/mm/aaaa</small>
-            	            </div>
+
+                          <div class="alert alert-info" role="alert">¡Importante! El ingreso estará disponible a partir del lunes 21 de septiembre.</div>
+
+            	            <input type="text" name="username" class="form-control input-lg" placeholder="Usuario">
+                          <input type="text" name="password" class="form-control input-lg" placeholder="Contraseña">
+
+                          <div class="texto-ayuda-login">
+                          <small><strong>Alumno:</strong> El usuario es tu número de cuenta y la contraseña es tu fecha de nacimiento en formato DDMMAAAA (Ejemplo: 31122005).</small><br>
+                          <small><strong>Profesor:</strong> El usuario es su RFC (con homoclave y sin guiones), y la contraseña es su número de trabajador de la UNAM.</small>
+                          </div>
+            	            <!--  <div class="input-group input-group-lg">
+                                <input type="text" class="date-picker form-control input-lg" data-date-language="es" data-date-start-view="decade" data-date-format="dd/mm/yyyy" data-date="31122005" value="31122005" name="password" placeholder="DDMMAAAA">
+                                 <small class="visible-xs visible-sm visible-md">Escribe tu fecha de nacimiento con el siguiente formato: dd/mm/aaaa</small>
+            	            </div> -->
                         </div>
         				<input class="boton-login" type="submit" value="Entrar">
                         {{ csrf.field | raw }}
