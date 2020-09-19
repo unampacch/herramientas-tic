@@ -32,6 +32,7 @@ class CuestionarioController extends BaseController{
 
         if ( count($preguntas) < 9 ) {
             $this->flash->addMessage('error', "Debes de contestar todas las preguntas");
+            return $response->withHeader('Location', $this->router->urlFor('cuestionario'));
         }elseif ( count($preguntas) == 9 ){
             $this->flash->addMessage('success', "Tus respuestas han sido guardadas con éxito, gracias por tu opinión.");
             Cuestionario::registro($this->session->id, $preguntas);
