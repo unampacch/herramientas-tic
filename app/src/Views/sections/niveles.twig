@@ -421,12 +421,12 @@
         </div>
     </div>
     <!-- MODAL BIENVENIDA -->
+    {% endif %}
 
-    <div class="cd-transition-layer visible" data-frame="38">
+    <div class="cd-transition-layer {% if modal == false %} visible {% endif %}" data-frame="38">
         <div class="bg-layer"></div>
     </div>
     <!-- .cd-transition-layer -->
-    {% endif %}
 </body>
 
 {% endblock %}
