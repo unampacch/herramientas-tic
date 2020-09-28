@@ -25,6 +25,10 @@ $container->set('auth', function () {
 	return new \App\Auth\Auth;
 });
 
+$container->set('edb', function () {
+	return new \App\ExternDB\ExternDB;
+});
+
 $container->set('flash', function() {
 	return new \Slim\Flash\Messages;
 });

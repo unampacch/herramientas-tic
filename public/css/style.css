@@ -2677,6 +2677,11 @@ textarea.input-minimal {
 .flash-messages {
   margin-top: 52px;
 }
+.flash-messages .close{
+    font-size: 21px;
+    margin-left: 10px;
+}
+
 @media (max-width: 768px) {
     .cd-modal#modal-bienvenida .interior-modal {
         max-width: 600px;

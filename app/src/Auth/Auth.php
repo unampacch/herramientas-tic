@@ -41,7 +41,7 @@ class Auth {
 
 		if ($this->verifica_contrasena($password, $user->Contrasena)) {
 			$session->id = $user->Id;
-			$session->nombre  = $user->Nombre." ".$user->Apellidos;
+			//$session->nombre  = $user->Nombre." ".$user->Apellidos;
 			return true;
 		}
 
@@ -63,8 +63,8 @@ class Auth {
     public function firstModal(){
         $session = new \SlimSession\Helper();
 
-        if( isset($_COOKIE['firstmodal']) ) {
-            if ( $_COOKIE['firstmodal'] == $session->id ) {
+        if( isset($_COOKIE['firstmodal_'.$session->id]) ) {
+            if ( $_COOKIE['firstmodal_'.$session->id] == 1 ) {
                 return true;
             }
         }

@@ -10,8 +10,8 @@ class NivelesController extends BaseController{
 
     public function show($request, $response){
 
-        if(!isset($_COOKIE['firstmodal'])){
-            setcookie('firstmodal', $this->session->id, time() + 365 * 24 * 60 * 60);
+        if(!isset($_COOKIE['firstmodal_'.$this->session->id])){
+            setcookie('firstmodal_'.$this->session->id, 1, time() + 365 * 24 * 60 * 60);
         }
 
         if(!$this->auth->check()){

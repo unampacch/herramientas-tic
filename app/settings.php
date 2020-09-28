@@ -13,6 +13,7 @@ $container->set('settings', function () {
                 'cache'=> false,
                 //'cache' => __DIR__ . '/../cache', //Activar en produccion
             ],
-        ]
+        ],
+        'authExternal' => false,
     ];
 });
