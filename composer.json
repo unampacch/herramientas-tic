@@ -10,7 +10,7 @@
         "vlucas/phpdotenv": "^5.1",
         "slim/csrf": "^1.0",
         "selective/basepath": "^1.0",
-        "illuminate/database": "~5.8"
+        "illuminate/database": "~6.20"
     },
     "autoload": {
         "psr-4": {
